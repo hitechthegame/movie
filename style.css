@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-weight: 400;
+  color: #ffd700;
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+#searchBtn,
+.refreshBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffd700;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover,
+.refreshBtn:hover {
+  background-color: #e6c200;
+}
+
+#movie-container {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.movie {
+  display: flex;
+  background-color: #222;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.movie img {
+  width: 150px;
+  object-fit: cover;
+}
+
+.movie-details {
+  padding: 15px;
+  flex: 1;
+}
+
+.movie-details h2 {
+  margin-top: 0;
+}
+
+.movie-details p {
+  margin: 5px 0;
+}
+
+.error {
+  text-align: center;
+  color: #ff5555;
+  margin-top: 20px;
+}
+
+.trailer-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.trailer-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #searchForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchInput {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  #searchBtn,
+  .refreshBtn {
+    width: 90%;
+  }
+
+  .movie {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie img {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .movie-details {
+    padding: 10px;
+  }
+
+  .movie-details h2 {
+    font-size: 18px;
+  }
+
+  .movie-details p {
+    font-size: 14px;
+  }
+}
